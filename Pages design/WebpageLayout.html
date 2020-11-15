@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Demo flexBox</title>
+        <style>
+            body { 
+                padding: 1cm;
+                display: flex;
+                min-height: 100vh;
+                flex-direction: row;
+                margin: 0;    
+             }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            .col-1 {
+                background: burlywood;
+                font-weight: bold;
+                padding: 10px;
+            }
+
+            .col-2 {
+                display: flex;
+                flex-direction: column;
+                flex: 5;
+            }
+            
+            .content {
+                display: flex;
+                flex-direction: row;
+                background-color: deepskyblue;
+            }
+
+            .content > article {
+                flex: 3;
+                min-height: 60vh;
+            }
+
+            .content > aside {
+                background: beige;
+                flex: 1;
+            }
+            
+            .headerContainer {
+                display: flex;
+                flex-flow: column wrap;
+                align-content: center;
+                background: tomato;
+                font-weight: bold;
+                padding: 10px;
+            }
+
+            .footerContainer {
+                display: flex;
+                flex-flow: column wrap;
+                align-content: center;
+                background: lightgreen;
+                font-weight: bold;
+                padding: 10px;
+            }
+
+            article{
+                padding: 10px;
+                margin: 10px;
+                background: aqua;
+            }
+
+            .headerContainer, .footerContainer {
+                background: yellowgreen;
+                height: 15vh;
+            }
+            header, footer, article, nav, aside {
+                padding: 1em;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class = "col-1">Navigation Bar</nav>
+        <div class = "col-2">
+            <header class = "headerContainer"><h1>Sample Flex Box Example</h1></header>
+            <main class = "content">
+                <article>
+                    <h2>First Article</h2>
+                    <p>Tacis actually microdosing,pour-over semiotics banjo chicharrones retro funny  portland everyday carry vinyl typewriter. 
+                    Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag polaroid single-origin coffee cold-pressed</p>
+                </article>
+                <article>
+                    <h2>Second Article</h2>
+                    <p>Tacis actually microdosing,pour-over semiotics banjo chicharrones retro funny  portland everyday carry vinyl typewriter. 
+                        Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag polaroid single-origin coffee cold-pressed</p>
+                </article>
+                <aside>
+                    <h2>Third Article</h2>
+                    <p>Tacis actually microdosing,pour-over semiotics banjo chicharrones retro funny  portland everyday carry vinyl typewriter. 
+                        Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag polaroid single-origin coffee cold-pressed</p>
+                    </aside>
+            </main>
+        <footer class = "footerContainer"><h3>Footer</h3></footer>
+        </div>
+    </body>
+
+</html>
